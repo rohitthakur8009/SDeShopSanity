@@ -182,151 +182,6 @@ public class SingtelTest {
 
 		}
 		
-		//Launch the Phone List Page from Mega Menu
-        /*
-		if(!productServicesPage.clickSubCategory("Phones"))
-		{
-			sanityResult=sanityResult.concat("Phone Page URL Launch Not Successful");
-			updateFailure(sanityResult, row);
-			testResults.put("Launch Phones Page", "FAIL -- Unable to Launch Phones list");
-			
-		}
-		
-		utility.waitForPageLoad();
-		
-		if(!phoneListPage.verifyPageTitle())
-		{
-			sanityResult=sanityResult.concat("Login Page URL Launch Not Successful");
-			updateFailure(sanityResult, row);
-			testResults.put("Launch Phones Page", "FAIL  Unable to Click Phones list");
-		}
-		else
-		{
-			sanityResult=sanityResult.concat("Login Page URL Launch Not Successful");
-			testResults.put("Launch Phones Page", "PASS");
-		}
-		
-		//Select Phone from Phone List Page
-		
-
-		if(!phoneListPage.selectDevice())
-		{
-			testResults.put("Select Phones from Phone List","FAIL");
-			
-		}
-		else
-		{
-			testResults.put("Select Phones from Phone List","PASS");
-		}
-		takeSS();
-		
-		utility.waitForPageLoad();
-		
-		if(!phoneListPage.verifyPageTitle())
-		{
-			sanityResult=sanityResult.concat("Phone Details page launch fail");
-			updateFailure(sanityResult, row);
-			testResults.put("Phone Details Page", "FAIL");
-		}
-		else
-		{
-			sanityResult=sanityResult.concat("Phone Details page launch fail");
-			testResults.put("Phone Details Page", "PASS");
-		}
-		
-		if(!phoneDetailsPage.selectDevice())
-		{
-			testResults.put("Select Phones from Phone Details","FAIL");
-		}
-		else
-		{
-			testResults.put("Select Phones from Phone Details","PASS");
-		}
-
-		utility.waitForPageLoad();
-		
-		if(!planListPage.verifyPageTitle())
-		{
-			testResults.put("Display Plan List Page","FAIL");
-		}
-		else
-		{
-			testResults.put("Display Plan List Page","PASS");
-		}
-		
-		//Select Plan from Plan List
-		
-		if(!planListPage.SelectPlan())
-		{
-			testResults.put("Plan Selection", "FAIL");
-		}
-		else
-		{
-			testResults.put("Plan Selection", "PASS");
-		}
-		
-		//Wait for Number Selection page
-		
-		utility.waitForPageLoad();
-		
-		
-		
-		if(!numberSelectionPage.verifyPageTitle())
-		{
-			testResults.put("Display Number Selection Page","FAIL");
-		}
-		else
-		{
-			testResults.put("Display Number Selection Page","PASS");
-		}
-		
-		//Select Number
-		
-		if(!numberSelectionPage.proceedfromNumberSelection())
-		{
-			testResults.put("Number Selection Step Successfull","FAIL");
-		}
-		else
-		{
-			testResults.put("Number Selection Step Successfull","PASS");
-		}
-		
-		//Verify Addons Page is loaded
-		
-		utility.waitForPageLoad();
-		
-		if(!mobileAddonsPage.verifyPageTitle())
-		{
-			testResults.put("Display Mobile Addons Page","FAIL");
-		}
-		else
-		{
-			testResults.put("Display Mobile Addons Page","PASS");
-		}
-		
-		//Proceed to Shopping Cart page
-		
-		if(!mobileAddonsPage.proceedToCartPage())
-		{
-			testResults.put("Add Addons & VASes","FAIL");
-		}
-		else
-		{
-			testResults.put("Add Addons & VASes","PASS");
-		}
-		
-		utility.waitForPageLoad();
-		
-		
-		if(!shoppingCartPage.verifyPageTitle())
-		{
-			testResults.put("Display Shopping Cart Page","FAIL");
-		}
-		else
-		{
-			testResults.put("Display Shopping Cart Page","PASS");
-		}
-		*/
 		
 		FHBTestCases fhbTestCases = new FHBTestCases(driver);
 		
@@ -352,9 +207,9 @@ public class SingtelTest {
 			try
 			{
 				String browserType=xls.getCellData("TEST", "BROWSER_TYPE", i);
-				SingtelTest eCare=new SingtelTest(browserType);
-				eCare.SanityTest(i);
-				eCare.stopDriver();
+				SingtelTest eShop=new SingtelTest(browserType);
+				eShop.SanityTest(i);
+				eShop.stopDriver();
 
 			}
 			catch(Exception e)
