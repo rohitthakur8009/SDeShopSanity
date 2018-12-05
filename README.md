@@ -1,3 +1,2 @@
 # SDeShopSanity
 
-# Initial Code Commit.
